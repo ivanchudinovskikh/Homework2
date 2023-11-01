@@ -2,18 +2,18 @@ package Workers;
 
 public class ProjectWorkers {
     public static void main(String[] args) {
-        final int NUM_OF_PROGRAMMERS = 5;
-        final int NUM_OF_TESTERS = 3;
-        final int NUM_OF_SUPPORTS = 10;
-        final int NUM_OF_ALL_TESTERS = NUM_OF_PROGRAMMERS * NUM_OF_TESTERS;
-        final int NUM_OF_ALL_SUPPORTS = NUM_OF_PROGRAMMERS * NUM_OF_SUPPORTS;
-        final int NUM_OF_ALL_SPEC = NUM_OF_PROGRAMMERS + NUM_OF_ALL_SUPPORTS + NUM_OF_ALL_TESTERS;
+        final int numberOfProgrammers = 5;
+        final int numberOfTesters = 3;
+        final int numberOfSupports = 10;
+        final int numberOfAllTesters = numberOfProgrammers * numberOfTesters;
+        final int numberOfAllSupports = numberOfProgrammers * numberOfSupports;
+        final int numberOfAllSpecialists = numberOfProgrammers + numberOfAllSupports + numberOfAllTesters;
 
-        System.out.println("Количество программистов на проекте = " + NUM_OF_PROGRAMMERS);
-        System.out.println("Количество тестировщиков на одного программиста = " + NUM_OF_TESTERS);
-        System.out.println("Количество специалистов поддержки на одного программиста = " + NUM_OF_SUPPORTS);
-        System.out.println("Количество тестировщиков на проекте = " + NUM_OF_ALL_TESTERS);
-        System.out.println("Количество специалистов поддержки на проекте = " + NUM_OF_ALL_SUPPORTS);
-        System.out.println("Количество технических специалистов на проекте = " + NUM_OF_ALL_SPEC);
+        System.out.println("Количество программистов на проекте = " + numberOfProgrammers);
+        System.out.println("Количество тестировщиков на одного программиста = " + numberOfTesters);
+        System.out.println("Количество специалистов поддержки на одного программиста = " + numberOfSupports);
+        System.out.println("Количество тестировщиков на проекте = " + numberOfAllTesters);
+        System.out.println("Количество специалистов поддержки на проекте = " + numberOfAllSupports);
+        System.out.println("Количество технических специалистов на проекте = " + numberOfAllSpecialists);
     }
 }

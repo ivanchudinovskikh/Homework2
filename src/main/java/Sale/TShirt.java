@@ -2,38 +2,29 @@ package Sale;
 
 public class TShirt {
     public static void main(String[] args) {
-        final int T_SHIRT_PRICE = 1000;
-        final int T_SHIRT_SELECTED = 10;
-        final int T_SHIRT_NUM_FOR_SALE = 2;
-        final int T_SHIRT_FOR_ADD = T_SHIRT_NUM_FOR_SALE - T_SHIRT_SELECTED;
-        final int T_SHIRT_SELECTED_PRICE = T_SHIRT_PRICE * T_SHIRT_SELECTED;
-        final int T_SHIRT_TO_ADD_PRICE = T_SHIRT_FOR_ADD * T_SHIRT_PRICE;
-        final double T_SHIRT_SALE = 0.25;
-        final double T_SHIRT_ALL_PRICE_SALE = T_SHIRT_SELECTED_PRICE - (T_SHIRT_SELECTED_PRICE * T_SHIRT_SALE);
-        final double ONE_T_SHIRT_SALE_PRICE = T_SHIRT_PRICE - (T_SHIRT_PRICE * T_SHIRT_SALE);
-        final double SAVED_MONEY;
-        if (T_SHIRT_SELECTED >= T_SHIRT_NUM_FOR_SALE) {
-            SAVED_MONEY = T_SHIRT_SELECTED_PRICE * T_SHIRT_SALE;
-        } else SAVED_MONEY = 0;
-        final double FREE_T_SHIRTS = SAVED_MONEY / T_SHIRT_PRICE;
+        final int price = 1000; //Цена одной рубашки без скидки
+        final int selected = 10; //Количество выбранных рубашек
+        final int untilDiscount = 2; //Количество рубашек которые нужно купить для получения скидки
+        final int toAdd = untilDiscount - selected; //Осталось купить рубашек для получения скидки
+        final int selectedPrice = price * selected; //Сумма выбраных рубашек
+        final int toAddPrice = toAdd * price; //Осталось потратить до получения скидки
 
-        System.out.println("Цена одной рубашки без скидки = " + T_SHIRT_PRICE);
-        System.out.println("Количество выбранных рубашек = " + T_SHIRT_SELECTED);
-        System.out.println("Количество рубашек которые нужно купить для получения скидки = " + T_SHIRT_NUM_FOR_SALE);
-        if (T_SHIRT_FOR_ADD < 0) {
-            System.out.println("Осталось купить рубашек для получения скидки = 0");
-        } else {
-            System.out.println("Осталось купить рубашек для получения скидки = " + T_SHIRT_FOR_ADD);
-        }
-        System.out.println("Сумма выбраных рубашек = " + T_SHIRT_SELECTED_PRICE);
-        if (T_SHIRT_TO_ADD_PRICE < 0) {
-            System.out.println("Осталось потратить до получения скидки = 0");
-        } else
-            System.out.println("Осталось потратить до получения скидки = " + T_SHIRT_TO_ADD_PRICE);
-        System.out.println("Процент скидки = " + T_SHIRT_SALE * 100 + "%");
-        System.out.println("Сумма со скидкой = " + T_SHIRT_ALL_PRICE_SALE);
-        System.out.println("Цена одной рубашки с применением скидки = " + ONE_T_SHIRT_SALE_PRICE);
-        System.out.println("Сэкономленно денег благодоря скидке = " + SAVED_MONEY);
-        System.out.println("Считай что куплено бесплатно рубашек = " + FREE_T_SHIRTS);
+        final double discount = 0.25; //Процент скидки
+        final double allPriceWithDiscount = selectedPrice - (selectedPrice * discount); //Сумма со скидкой
+        final double priceWithDiscount = price - (price * discount); //Цена одной рубашки с применением скидки
+        final double savedMoney = selectedPrice * discount; //Сэкономленно денег благодоря скидке
+        final double freeTShirts = savedMoney / price; //Считай что куплено бесплатно рубашек
+
+        System.out.println("Цена одной рубашки без скидки = " + price);
+        System.out.println("Количество выбранных рубашек = " + selected);
+        System.out.println("Количество рубашек которые нужно купить для получения скидки = " + untilDiscount);
+        System.out.println("Осталось купить рубашек для получения скидки = " + toAdd);
+        System.out.println("Сумма выбраных рубашек = " + selectedPrice);
+        System.out.println("Осталось потратить до получения скидки = " + toAddPrice);
+        System.out.println("Процент скидки = " + discount * 100 + "%");
+        System.out.println("Сумма со скидкой = " + allPriceWithDiscount);
+        System.out.println("Цена одной рубашки с применением скидки = " + priceWithDiscount);
+        System.out.println("Сэкономленно денег благодоря скидке = " + savedMoney);
+        System.out.println("Считай что куплено бесплатно рубашек = " + freeTShirts);
     }
 }
